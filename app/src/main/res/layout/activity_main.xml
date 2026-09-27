@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#F5F5F5">
+ <TextView android:id="@+id/title" android:text="CICCIO'S • ORDINI" android:textStyle="bold" android:textSize="24sp" android:textColor="#FFD618" android:background="#111111" android:gravity="center_vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="64dp"/>
+ <TextView android:id="@+id/status" android:text="Configurazione richiesta" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+ <LinearLayout android:id="@+id/setupBox" android:orientation="vertical" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+  <EditText android:id="@+id/api" android:hint="URL API" android:inputType="textUri" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <EditText android:id="@+id/token" android:hint="Token dispositivo" android:inputType="textPassword" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <Button android:id="@+id/save" android:text="SALVA E CONNETTI" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+ </LinearLayout>
+ <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="6dp">
+  <Button android:id="@+id/tabOrders" android:text="ORDINI" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+  <Button android:id="@+id/tabHistory" android:text="STORICO" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+ </LinearLayout>
+ <LinearLayout android:id="@+id/historyFilter" android:visibility="gone" android:orientation="horizontal" android:padding="6dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+  <EditText android:id="@+id/historyDate" android:hint="AAAA-MM-GG" android:inputType="date" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+  <Button android:id="@+id/loadHistory" android:text="CARICA" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+ </LinearLayout>
+ <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"><LinearLayout android:id="@+id/orders" android:orientation="vertical" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/></ScrollView>
+</LinearLayout>

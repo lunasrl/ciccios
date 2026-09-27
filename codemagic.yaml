@@ -1,0 +1,12 @@
+workflows:
+  android-debug:
+    name: Ciccios SUNMI APK
+    max_build_duration: 30
+    environment:
+      java: 11
+    scripts:
+      - name: Build installable APK
+        script: |
+          gradle assembleDebug
+    artifacts:
+      - app/build/outputs/apk/debug/*.apk
